@@ -6,4 +6,6 @@ version = 7.x-1.0
 dependencies[] = features
 dependencies[] = taxonomy
 features[features_api][] = api:2
+features[ctools][] = views:views_default:3.0
 features[taxonomy][] = webform_category
+features[views_view][] = webforms
