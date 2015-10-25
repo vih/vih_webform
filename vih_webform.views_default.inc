@@ -60,30 +60,30 @@ function vih_webform_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Felt: Indhold: Nid */
+  /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Felt: Indhold: Titel */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = 'Navn';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Felt: Webformular: Antal webform indsendelser */
+  /* Field: Webform: Webform submission count */
   $handler->display->display_options['fields']['webform_submission_count_node']['id'] = 'webform_submission_count_node';
   $handler->display->display_options['fields']['webform_submission_count_node']['table'] = 'node';
   $handler->display->display_options['fields']['webform_submission_count_node']['field'] = 'webform_submission_count_node';
   $handler->display->display_options['fields']['webform_submission_count_node']['label'] = 'Antal';
-  /* Felt: Indhold: Kategori */
+  /* Field: Content: Category */
   $handler->display->display_options['fields']['field_webform_category']['id'] = 'field_webform_category';
   $handler->display->display_options['fields']['field_webform_category']['table'] = 'field_data_field_webform_category';
   $handler->display->display_options['fields']['field_webform_category']['field'] = 'field_webform_category';
-  /* Felt: Global: Tilpasset tekst */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -92,7 +92,7 @@ function vih_webform_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['nothing']['alter']['path'] = 'node/[nid]/webform/emails';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Felt: Global: Tilpasset tekst */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
@@ -101,44 +101,44 @@ function vih_webform_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['nothing_1']['alter']['path'] = 'node/[nid]/webform-results/table';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
-  /* Felt: Webformular: Link til redigering af webform */
+  /* Field: Webform: Webform edit link */
   $handler->display->display_options['fields']['webform_edit']['id'] = 'webform_edit';
   $handler->display->display_options['fields']['webform_edit']['table'] = 'node';
   $handler->display->display_options['fields']['webform_edit']['field'] = 'webform_edit';
   $handler->display->display_options['fields']['webform_edit']['label'] = '';
   $handler->display->display_options['fields']['webform_edit']['element_label_colon'] = FALSE;
-  /* Felt: Indhold: Redigér-link */
+  /* Field: Content: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['label'] = '';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
-  /* Felt: Indhold: Slet-link */
+  /* Field: Content: Delete link */
   $handler->display->display_options['fields']['delete_node']['id'] = 'delete_node';
   $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
   $handler->display->display_options['fields']['delete_node']['label'] = '';
   $handler->display->display_options['fields']['delete_node']['element_label_colon'] = FALSE;
-  /* Sorteringskriterie: Indhold: Oprettelsesdato */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'webform' => 'webform',
   );
-  /* Filterkriterie: Indhold: Kategori (field_webform_category) */
+  /* Filter criterion: Content: Category (field_webform_category) */
   $handler->display->display_options['filters']['field_webform_category_tid']['id'] = 'field_webform_category_tid';
   $handler->display->display_options['filters']['field_webform_category_tid']['table'] = 'field_data_field_webform_category';
   $handler->display->display_options['filters']['field_webform_category_tid']['field'] = 'field_webform_category_tid';
@@ -148,8 +148,6 @@ function vih_webform_views_default_views() {
   $handler->display->display_options['filters']['field_webform_category_tid']['expose']['operator'] = 'field_webform_category_tid_op';
   $handler->display->display_options['filters']['field_webform_category_tid']['expose']['identifier'] = 'field_webform_category_tid';
   $handler->display->display_options['filters']['field_webform_category_tid']['expose']['remember'] = TRUE;
-  $handler->display->display_options['filters']['field_webform_category_tid']['reduce_duplicates'] = TRUE;
-  $handler->display->display_options['filters']['field_webform_category_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_webform_category_tid']['vocabulary'] = 'webform_category';
 
   /* Display: Side */
@@ -158,21 +156,21 @@ function vih_webform_views_default_views() {
   $handler->display->display_options['title'] = 'Webformularer';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'webform' => 'webform',
   );
-  /* Filterkriterie: Indhold: Kategori (field_webform_category) */
+  /* Filter criterion: Content: Category (field_webform_category) */
   $handler->display->display_options['filters']['field_webform_category_tid']['id'] = 'field_webform_category_tid';
   $handler->display->display_options['filters']['field_webform_category_tid']['table'] = 'field_data_field_webform_category';
   $handler->display->display_options['filters']['field_webform_category_tid']['field'] = 'field_webform_category_tid';
@@ -182,8 +180,6 @@ function vih_webform_views_default_views() {
   $handler->display->display_options['filters']['field_webform_category_tid']['expose']['operator'] = 'field_webform_category_tid_op';
   $handler->display->display_options['filters']['field_webform_category_tid']['expose']['identifier'] = 'field_webform_category_tid';
   $handler->display->display_options['filters']['field_webform_category_tid']['expose']['remember'] = TRUE;
-  $handler->display->display_options['filters']['field_webform_category_tid']['reduce_duplicates'] = TRUE;
-  $handler->display->display_options['filters']['field_webform_category_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_webform_category_tid']['vocabulary'] = 'webform_category';
   $handler->display->display_options['path'] = 'admin/dashboard/webforms';
   $handler->display->display_options['menu']['type'] = 'tab';
@@ -208,12 +204,14 @@ function vih_webform_views_default_views() {
     t('sidste »'),
     t('Navn'),
     t('Antal'),
-    t('Kategori'),
+    t('Category'),
     t('E-mails'),
     t('Tabel'),
     t('Kategori (field_webform_category)'),
     t('Side'),
     t('Webformularer'),
+    t('more'),
+    t('Kategori'),
   );
   $export['webforms'] = $view;
 
