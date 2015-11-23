@@ -13,9 +13,9 @@ function vih_webform_views_default_views() {
   $view = new view();
   $view->name = 'webforms';
   $view->description = '';
-  $view->tag = 'default';
+  $view->tag = 'VIH';
   $view->base_table = 'node';
-  $view->human_name = 'Webforms';
+  $view->human_name = 'VIH Webforms';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -150,8 +150,8 @@ function vih_webform_views_default_views() {
   $handler->display->display_options['filters']['field_webform_category_tid']['expose']['remember'] = TRUE;
   $handler->display->display_options['filters']['field_webform_category_tid']['vocabulary'] = 'webform_category';
 
-  /* Display: Side */
-  $handler = $view->new_display('page', 'Side', 'page_1');
+  /* Display: Admin Page */
+  $handler = $view->new_display('page', 'Admin Page', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Webformularer';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -170,17 +170,27 @@ function vih_webform_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'webform' => 'webform',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Content: Category (field_webform_category) */
-  $handler->display->display_options['filters']['field_webform_category_tid']['id'] = 'field_webform_category_tid';
-  $handler->display->display_options['filters']['field_webform_category_tid']['table'] = 'field_data_field_webform_category';
-  $handler->display->display_options['filters']['field_webform_category_tid']['field'] = 'field_webform_category_tid';
-  $handler->display->display_options['filters']['field_webform_category_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_webform_category_tid']['expose']['operator_id'] = 'field_webform_category_tid_op';
-  $handler->display->display_options['filters']['field_webform_category_tid']['expose']['label'] = 'Kategori';
-  $handler->display->display_options['filters']['field_webform_category_tid']['expose']['operator'] = 'field_webform_category_tid_op';
-  $handler->display->display_options['filters']['field_webform_category_tid']['expose']['identifier'] = 'field_webform_category_tid';
-  $handler->display->display_options['filters']['field_webform_category_tid']['expose']['remember'] = TRUE;
-  $handler->display->display_options['filters']['field_webform_category_tid']['vocabulary'] = 'webform_category';
+  $handler->display->display_options['filters']['field_webform_category_tid_1']['id'] = 'field_webform_category_tid_1';
+  $handler->display->display_options['filters']['field_webform_category_tid_1']['table'] = 'field_data_field_webform_category';
+  $handler->display->display_options['filters']['field_webform_category_tid_1']['field'] = 'field_webform_category_tid';
+  $handler->display->display_options['filters']['field_webform_category_tid_1']['group'] = 1;
+  $handler->display->display_options['filters']['field_webform_category_tid_1']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_webform_category_tid_1']['expose']['operator_id'] = 'field_webform_category_tid_1_op';
+  $handler->display->display_options['filters']['field_webform_category_tid_1']['expose']['label'] = 'Category';
+  $handler->display->display_options['filters']['field_webform_category_tid_1']['expose']['operator'] = 'field_webform_category_tid_1_op';
+  $handler->display->display_options['filters']['field_webform_category_tid_1']['expose']['identifier'] = 'field_webform_category_tid_1';
+  $handler->display->display_options['filters']['field_webform_category_tid_1']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    6 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['filters']['field_webform_category_tid_1']['type'] = 'select';
+  $handler->display->display_options['filters']['field_webform_category_tid_1']['vocabulary'] = 'webform_category';
   $handler->display->display_options['path'] = 'admin/dashboard/webforms';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Webformularer';
@@ -208,10 +218,9 @@ function vih_webform_views_default_views() {
     t('E-mails'),
     t('Tabel'),
     t('Kategori (field_webform_category)'),
-    t('Side'),
+    t('Admin Page'),
     t('Webformularer'),
     t('more'),
-    t('Kategori'),
   );
   $export['webforms'] = $view;
 
